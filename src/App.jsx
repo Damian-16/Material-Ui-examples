@@ -7,6 +7,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import theme from './temaConfig';
 import Navbar from './components/Navbar';
 import Listas from './components/Lista';
+import Oculto from './components/Oculto';
 
 const useStyles = makeStyles({
   BotonPersonalizado:{
@@ -51,6 +52,7 @@ function App() {
    
   </div>
   <Listas/>
+  <Oculto/>
   </ThemeProvider>
   );
 }
