@@ -5,6 +5,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import { IconButton ,Icon, makeStyles} from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './temaConfig';
+import Navbar from './components/Navbar';
 
 const useStyles = makeStyles({
   BotonPersonalizado:{
@@ -26,6 +27,7 @@ function App() {
   
   return (
     <ThemeProvider theme={theme}>
+      <Navbar/>
   <div>
     jasjaksas
     <Button className={classes.BotonPersonalizado}>ESTE ES UN BOTON</Button>
