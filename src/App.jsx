@@ -6,6 +6,7 @@ import { IconButton ,Icon, makeStyles} from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './temaConfig';
 import Navbar from './components/Navbar';
+import Listas from './components/Lista';
 
 const useStyles = makeStyles({
   BotonPersonalizado:{
@@ -49,6 +50,7 @@ function App() {
    
    
   </div>
+  <Listas/>
   </ThemeProvider>
   );
 }
