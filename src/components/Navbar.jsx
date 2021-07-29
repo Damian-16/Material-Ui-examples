@@ -11,14 +11,21 @@ const useStyles = makeStyles(theme=>({
     offset:theme.mixins.toolbar, //va a colocar el alto de forma dinamica
     menuButton:{
         marginRight:theme.spacing(2),//8 x2 =16px de espaciado
+    },
+    title:{
+      flexGrow:1
+    },
+    appBar:{
+      width:`calc(100% - ${240}px)`,
+      marginLeft:240
     }
 }) )
 
 const Navbar = () => {
     const classes = useStyles()
     return (
-        <div>
-            <AppBar position="fixed" color="primary">
+       
+            <AppBar position="fixed" color="primary" className={classes.appBar}>
               <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu">
                   <MenuIcon />
@@ -28,9 +35,14 @@ const Navbar = () => {
                 </Typography>
               </Toolbar>
             </AppBar>
-            <div className={classes.offset}></div>
-        </div>
+          
+       
     )
 }
 
 export default Navbar
+
+
+
+
+{/* <div className={classes.offset}></div> */}
