@@ -1,5 +1,6 @@
 import { Hidden, makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
+import Cajita from './Cajita'
 import Cajon from './Cajon'
 import Navbar from './Navbar'
 
@@ -43,8 +44,10 @@ const Contenedor = () => {
             </Hidden>
            <div className={classes.content}>
            <div className={classes.toolbar}>
+              
            
                </div> 
+               <Cajita/>
              
                content
         </div>
