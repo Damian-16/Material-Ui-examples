@@ -49,7 +49,7 @@ const Contenedor = () => {
                </div> 
                <Cajita/>
              
-               content
+               contenido 
         </div>
         </div> 
     )
