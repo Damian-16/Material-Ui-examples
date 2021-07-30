@@ -27,6 +27,7 @@ const Contenedor = () => {
         <div className={classes.root}>
             <Navbar
             accionAbrir={accionAbrir}/>
+            {/* //se envia para el onclick la funcion */}
             <Hidden xsDown>
             <Cajon
             variant="permanent"
@@ -37,7 +38,7 @@ const Contenedor = () => {
             <Cajon
             variant="temporary"
             open={abrir}
-            onClose={accionAbrir}
+            onClose={accionAbrir}//se reciben los resultados para cerrar el cajon
            />
             </Hidden>
            <div className={classes.content}>

@@ -23,7 +23,8 @@ const Cajon = (props) => {
        classes={{paper:classes.drawerPaper}}
        anchor="left"
        open={props.open}
-       onClose={props.onClose? props.onClose:null}>
+       onClose={props.onClose? props.onClose:null}>     {/* se Recibe o true o false dependiendo de eso se envia o no el resultado para q se cierre*/}
+   
            <div className={classes.toolbar}></div>
            <Divider/>
            <Listas/>
