@@ -11,23 +11,30 @@ const useStyles = makeStyles(theme=>({
     offset:theme.mixins.toolbar, //va a colocar el alto de forma dinamica
     menuButton:{
         marginRight:theme.spacing(2),//8 x2 =16px de espaciado
+        [theme.breakpoints.up('sm')]:{
+          display:'none'
+        }
     },
     title:{
       flexGrow:1
     },
     appBar:{
-      width:`calc(100% - ${240}px)`,
+      // width:`calc(100% - ${240}px)`,
+      // marginLeft:240
+    [theme.breakpoints.up('sm')]:{ // de esta manera se modifica con el punto de quiebre sm
+     width:`calc(100% - ${240}px)`,
       marginLeft:240
+    }
     }
 }) )
 
-const Navbar = () => {
+const Navbar = (props) => {
     const classes = useStyles()
     return (
        
             <AppBar position="fixed" color="primary" className={classes.appBar}>
               <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="menu">
+                <IconButton edge="start" color="inherit" aria-label="menu" onClick={()=>props.accionAbrir()}>
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="h6">
